@@ -1,5 +1,5 @@
 //comment
-/*console.log("hello World");
+console.log("hello World");
  let a=4;
  let b=6;
 
@@ -12,7 +12,7 @@ if (reply % 5 == 0){
 }else{
     console.log('no');
 }
-*/
+
 let score = prompt("Enter score your here");
 if(90<score && score<100){
     console.log("A");
