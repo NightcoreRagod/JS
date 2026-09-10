@@ -37,19 +37,20 @@ for(let i=0; i<100 ;i++){
     }
 }
 */
-let gamenum= 35;
+let game_num= 35;
 ask = prompt("guess the the number");
 
 
-for(let i=0; ask == gamenum; i++){
-    if(ask == gamenum){
-    console.log("you won!");
-}else if(ask > gamenum) {
-    console.log("it is less than ", ask);
-} else if(ask < gamenum){
-    console.log("its more than", ask);
-}else{
-    console.log("Invalid input")
-}
+for(let i=0; ask != game_num; i++){
+   
+    if(ask == game_num){
+        console.log("you won!");
+    }else if(ask > game_num) {
+        console.log("it is less than ", ask);
+    } else if(ask < game_num){
+        console.log("its more than", ask);
+    }else{
+        console.log("Invalid input");
+    }
 
 }
