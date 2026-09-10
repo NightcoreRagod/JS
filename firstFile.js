@@ -36,11 +36,11 @@ for(let i=0; i<100 ;i++){
         console.log(i);
     }
 }
-*/
+
 let game_num= 35;
 ask = prompt("guess the the number");
 
-
+//goes to infinite loop
 for(let i=0; ask != game_num; i++){
    
     if(ask == game_num){
@@ -52,5 +52,16 @@ for(let i=0; ask != game_num; i++){
     }else{
         console.log("Invalid input");
     }
+}       
+*/
 
-}
+let game_num= 35;
+ask = prompt("guess the the number");
+
+
+    while(ask != game_num){
+        ask = prompt("you have guessed the number wrong");
+    
+    }
+    console.log("congratulation you have guessed it right!");
+    
