@@ -1,10 +1,10 @@
 //comment
-console.log("hello World");
+/*console.log("hello World");
  let a=4;
  let b=6;
 alert("be aware");
  console.log("a + b =", a+b);
- 
+
 for(let i=0; i<=5 ; i++){
     let reply= prompt("Check if your number is a multiple of 5");
 if (reply % 5 == 0){
@@ -28,4 +28,28 @@ if(90<=score && score<=100){
     console.log("F");
 }else{
     console.log("Invalid");
+}
+
+
+for(let i=0; i<100 ;i++){
+    if(i%2==0){
+        console.log(i);
+    }
+}
+*/
+let gamenum= 35;
+ask = prompt("guess the the number");
+
+
+for(let i=0; ask == gamenum; i++){
+    if(ask == gamenum){
+    console.log("you won!");
+}else if(ask > gamenum) {
+    console.log("it is less than ", ask);
+} else if(ask < gamenum){
+    console.log("its more than", ask);
+}else{
+    console.log("Invalid input")
+}
+
 }
