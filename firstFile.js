@@ -53,7 +53,7 @@ for(let i=0; ask != game_num; i++){
         console.log("Invalid input");
     }
 }       
-*/
+
 
 let game_num= 35;
 ask = prompt("guess the the number");
@@ -64,4 +64,7 @@ ask = prompt("guess the the number");
     
     }
     console.log("congratulation you have guessed it right!");
-    
+ */
+const fun = () =>{
+    console.log("hello")
+}
