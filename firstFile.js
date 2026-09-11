@@ -66,5 +66,5 @@ ask = prompt("guess the the number");
     console.log("congratulation you have guessed it right!");
  */
 const fun = () =>{
-    console.log("hello")
+    return console.log();
 }
