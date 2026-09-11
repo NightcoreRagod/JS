@@ -68,3 +68,4 @@ ask = prompt("guess the the number");
 const fun = () =>{
     return console.log();
 }
+
