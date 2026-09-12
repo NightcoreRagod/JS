@@ -74,7 +74,7 @@ let head = document.getElementById("hello");
 console.dir(head.innerText);
 
 head.innerText = head.innerText + "from Apna College Students";
-*/
+
 
 let divs = document.querySelectorAll(".first");
 
@@ -83,3 +83,13 @@ for ( div of divs){
     div.innerText =`new unique value ${idx};`
     idx++;
 }
+*/
+let btw = document.createElement("button");
+btw.innerText="click me";
+console.log(btw);
+
+btw.style.color = "white";
+btw.style.background = "red";
+
+
+let div = document.querySelector('body').prepend(btw);
