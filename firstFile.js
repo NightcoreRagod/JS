@@ -77,4 +77,9 @@ head.innerText = head.innerText + "from Apna College Students";
 */
 
 let divs = document.querySelectorAll(".first");
-console.dir(divs);
+
+let idx =1;
+for ( div of divs){
+    div.innerText =`new unique value ${idx};`
+    idx++;
+}
