@@ -64,8 +64,17 @@ ask = prompt("guess the the number");
     
     }
     console.log("congratulation you have guessed it right!");
- */
+ 
 const fun = () =>{
     return console.log();
-}
+ }
 
+
+let head = document.getElementById("hello");
+console.dir(head.innerText);
+
+head.innerText = head.innerText + "from Apna College Students";
+*/
+
+let divs = document.querySelectorAll(".first");
+console.dir(divs);
