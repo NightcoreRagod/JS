@@ -83,7 +83,7 @@ for ( div of divs){
     div.innerText =`new unique value ${idx};`
     idx++;
 }
-*/
+
 let btw = document.createElement("button");
 btw.innerText="click me";
 console.log(btw);
@@ -93,3 +93,5 @@ btw.style.background = "red";
 
 
 let div = document.querySelector('body').prepend(btw);
+
+*/
