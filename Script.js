@@ -1,0 +1,81 @@
+const startScreen = document.getElementById("start-screen");
+const quizScreen = document.getElementById("quiz-screen");
+const resultScreen = document.getElementById("result-screen");
+const startButton = document.getElementById("start-Button");
+const questionText = document.getElementById("question-Text")
+const answerContainer = document.getElementById("answer-Container");
+const CurrentQuestionSpan = document.getElementById("Current-Question");
+const totalQuestionSpan = document.getElementById("total-Question");
+const scoreSpan = document.getElementById("score");
+const finalScoreSpan = document.getElementById("final-Score");
+const maxScoreSpan = document.getElementById("max-Score");
+const resultMessage = document.getElementById("result-Message");
+const restartButton = document.getElementById("restart-Btn");
+const progressBar = document.getElementById("progress");
+
+const quizQuestions =[{
+    question: "What is the capital of France?",
+    answer:[
+        {Text:"London", correct: false},
+        {Text:"Berlin", correct: false},
+        {Text:"Paris", correct: true},
+        {Text:"Madrid", correct: false},
+    ],
+
+},{
+    question: "What is the largest ocean on Earth?",
+    answer:[
+        {Text:"Atlantic Ocean", correct: false},
+        {Text:"Indian Ocean", correct: false},
+        {Text:"Arctic Ocean", correct: false},
+        {Text:"Pacific", correct: true},
+    ],
+
+},{
+    question: "What is the chemical of gold?",
+    answer:[
+        {Text:"Gd", correct: false},
+        {Text:"Go", correct: false},
+        {Text:"Au", correct: true},
+        {Text:"Ag", correct: false},
+    ],
+  
+},{
+    question: "Which planet is known as the Red Planet?",
+    answer:[
+        {Text:"Venus", correct: false},
+        {Text:"Mars", correct: true},
+        {Text:"Jupiter", correct: false},
+        {Text:"Saturn", correct: false},
+    ],
+
+},{
+    question: "Which of these is not a programming Language?",
+    answer:[
+        {Text:"Java", correct: false},
+        {Text:"python", correct: false},
+        {Text:"ox", correct: true},
+        {Text:"JavaScript", correct: false},
+    ],
+
+}];
+ 
+let CurrentQuestionIndex = 0;
+let score = 0;
+let answersDisabled = false
+
+totalQuestionSpan.textContent= quizQuestions.length;
+maxScoreSpan.textContent = quizQuestions.length;
+
+// event listeners
+
+startButton.addEventListener("click",startQuiz);
+restartButton.addEventListener("click",restartQuiz);
+
+function startQuiz(){
+    console.log("quiz started");
+}
+
+function restartQuiz(){
+    console.log("quiz re-started");
+}
