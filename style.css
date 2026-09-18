@@ -40,6 +40,12 @@ body{
     font-size: 2.5rem;
 }
 
+#start-screen p{
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1 rem;
+}
+
 .quiz-header{
     margin-bottom: 2rem ;
 }
@@ -140,4 +146,34 @@ button{
     padding: 15px 30px;
     font-size: 1.1rem;
     cursor: pointer;
+}
+
+button:hover{
+    background-color: #d45b28;
+
+}
+
+@media(max-width:500px){
+    .screen{
+        padding: 3rem;
+    }
+
+    #start-screen h1{
+        font-size: 2rem;
+    }
+
+    #question-text{
+        font-size: 1.3rem;
+    }
+
+    .answer-btn{
+        padding: 12px;
+    }
+
+     button{
+        padding: 12px 25px;
+        font-size: 1rem   ;
+     }
+
+
 }
