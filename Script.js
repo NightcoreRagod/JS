@@ -78,7 +78,47 @@ function startQuiz(){
     scoreSpan.textContent = score
 
     startScreen.classList.remove("active");
-    startScreen.classList.remove("active");
+    quizScreen.classList.add("active");
+
+    showQuestion()
+}
+
+function showQuestion(){
+
+    answersDisabled = false
+
+    const currentQuestion = quizQuestions[CurrentQuestionIndex]
+
+    CurrentQuestionSpan.textContent= CurrentQuestionIndex + 1;
+
+    const progressPercent = (CurrentQuestionIndex/quizQuestions.length) * 100;
+
+    progressBar.style.width = progressPercent + "%"
+
+    questionText.textContent = currentQuestion.question
+
+    answersContainer.innerHTML="";
+
+     currentQuestion.answer.forEach(answer=>{
+        const button = document.createElement("button")
+        button.textContent = answer.text
+        button.classList.add("answer-btn")
+
+        button.dataset.correct = answer.correct
+
+        button.addEventListener("click",selectAnswer)
+
+        answerContainer.appendChild(button);
+     });
+}
+
+function selectAnswer(event) {
+    if(answersDisabled) return
+
+    answersDisabled = true
+
+    const selectedButton = event.target;
+    const isCorrect = selectedButton.dataset.correct==="true"
 }
 
 function restartQuiz(){
