@@ -73,7 +73,12 @@ startButton.addEventListener("click",startQuiz);
 restartButton.addEventListener("click",restartQuiz);
 
 function startQuiz(){
-    console.log("quiz started");
+    CurrentQuestionIndex = 0;
+    score = 0;
+    scoreSpan.textContent = score
+
+    startScreen.classList.remove("active");
+    startScreen.classList.remove("active");
 }
 
 function restartQuiz(){
