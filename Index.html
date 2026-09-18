@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">@import url(https://fonts.googleapis.com/css?family=Playwrite+NZ+Basic+Guides:regular);
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="screen active" id="start screen">
-            <h1>Quiz-Time</h1>
+        <div class="screen active" id="start-screen">
+            <h1>Quiz-Time!</h1>
             <p>Test yor knowledge with this fun question</p>
             <button class="start-btn">star Quiz</button>
+            
+        <div class="screen" id="quiz screen">
+            <div class="header" >
+                <h2 id="question-text">Question goes here</h2>
+                <div class="quiz-info">
+                    <p>Question<span id="current-questio">1</span>of <span>5</span></p>
+
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+            </div>
+            
             <div id="answer-container" class="answer-container">
                 <!--answers will be coded in JS here-->
             </div>
-        <div class="screen" id="quiz screen">
-            <div class="header" >
-                <h2 id="question-text"></h2>
-            </div>
+
            <div class="progress-bar"></div>
-            <div id="progress-bar" class="progress-bar"></div>
+            <div id="progress class="progress"></div>
         </div>  
         </div>
            
