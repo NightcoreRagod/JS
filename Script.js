@@ -21,7 +21,7 @@ const quizQuestion = [
             {Text:"Berlin", correct: false},
             {Text:"Paris", correct: true},
             {Text:"Madrid", correct: false},
-        ]
+        ],
     },
     {
         question: "What is the largest ocean on Earth?",
@@ -39,7 +39,7 @@ const quizQuestion = [
             {Text:"Go", correct: false},
             {Text:"Au", correct: true},
             {Text:"Ag", correct: false},
-            ],
+        ],
     },
     {
         question: "Which planet is known as the Red Planet?",
@@ -48,7 +48,7 @@ const quizQuestion = [
             {Text:"Mars", correct: true},
             {Text:"Jupiter", correct: false},
             {Text:"Saturn", correct: false},
-            ],
+        ],
     },
     {
     question: "Which of these is not a programming Language?",
@@ -63,7 +63,7 @@ const quizQuestion = [
  
 let CurrentQuestionIndex = 0;
 let score = 0;
-let answersDisabled = false
+let answersDisabled = false;
 
 totalQuestionSpan.textContent= quizQuestion.length;
 maxScoreSpan.textContent = quizQuestion.length;
@@ -76,33 +76,33 @@ restartButton.addEventListener("click",restartQuiz);
 function startQuiz(){
     CurrentQuestionIndex = 0;
     score = 0;
-    scoreSpan.textContent = score
+    scoreSpan.textContent = 0;
 
     startScreen.classList.remove("active");
     quizScreen.classList.add("active");
 
-    showQuestion()
+    showQuestion();
 }
 
 function showQuestion(){
 
-    answersDisabled = false
+    answersDisabled = false;
 
-    const currentQuestion = quizQuestion[CurrentQuestionIndex]
+    const currentQuestion = quizQuestion[CurrentQuestionIndex];
 
     CurrentQuestionSpan.textContent= CurrentQuestionIndex + 1;
 
-    const progressPercent = (CurrentQuestionIndex/quizQuestions.length) * 100;
+    const progressPercent = (CurrentQuestionIndex/quizQuestion.length) * 100;
 
     progressBar.style.width = progressPercent + "%"
 
-    questionText.textContent = CurrentQuestionIndex.question;
+    questionText.textContent = currentQuestion.question;
 
     answerContainer.innerHTML="";
 
-     currentQuestion.answer.forEach(answer=>{
+     currentQuestion.answer.forEach((answer)=>{
         const button = document.createElement("button");
-        button.textContent = answer.text;
+        button.textContent = answer.Text;
         button.classList.add("answer-btn");
 
         button.dataset.correct = answer.correct;
@@ -133,17 +133,18 @@ function selectAnswer(event) {
         score++;
         scoreSpan.textContent = score;
     }
+
+
+    setTimeout (()=>{
+        CurrentQuestionIndex++;
+
+        if(CurrentQuestionIndex < quizQuestions.length){
+            showQuestion();
+        }else{
+            showResults();
+        }
+    },1000);
 }
-
-setTimeout (()=>{
-    CurrentQuestionIndex++;
-
-    if(CurrentQuestionIndex < quizQuestions.length){
-        showQuestion();
-    }else{
-        showResults();
-    }
-},1000);
 
 function showResults(){
     quizScreen.classList.remove("active");
