@@ -155,10 +155,18 @@ function showResults(){
     if(percentage === 100){
         resultMessage.textContent = "Perfect! your a genius";
     }else if(percentage>=80){
-
+        resultMessage.textContent = "Great! you know your stuff";
+    }else if(percentage>=60){
+        resultMessage.textContent = "Good effort! Keep learning";
+    }else if(percentage>=40){
+        resultMessage.textContent = "Not Bad! Try again to improve";
+    }else{
+        resultMessage.textContent = "Keep Studying! you'll get better";
     }
 }
 
 function restartQuiz(){
-    console.log("quiz re-started");
+    resultScreen.classList.remove("active");
+
+    startQuiz();
 }
