@@ -135,8 +135,18 @@ function selectAnswer(event) {
 }
 
 setTimeout (()=>{
+    CurrentQuestionIndex++;
 
+    if(CurrentQuestionIndex<quizQuestions.length){
+        showQuestion()
+    }else{
+        showResults()
+    }
 },1000)
+
+function showResults(){
+    
+}
 
 function restartQuiz(){
     console.log("quiz re-started");
