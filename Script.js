@@ -126,8 +126,17 @@ function selectAnswer(event) {
         }else{
             button.classList.add("incorrect")
         }
-    })
+    });
+
+    if(isCorrect){
+        score++;
+        scoreSpan.textContent = score
+    }
 }
+
+setTimeout (()=>{
+
+},1000)
 
 function restartQuiz(){
     console.log("quiz re-started");
