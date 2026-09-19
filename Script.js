@@ -145,7 +145,18 @@ setTimeout (()=>{
 },1000)
 
 function showResults(){
-    
+    quizScreen.classList.remove("active")
+    resultScreen.classList.add("active")
+
+    finalScoreSpan.textContent = score;
+
+    const percentage =(score/quizQuestions.length) * 100
+
+    if(percentage === 100){
+        resultMessage.textContent = "Perfect! your a genius";
+    }else if(percentage>=80){
+
+    }
 }
 
 function restartQuiz(){
